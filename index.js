@@ -52,7 +52,7 @@ window.addEventListener("load", function() {
     const slidesLength = sliderItems.length;
     let positionX = 0;
     let index = 0;
-    console.log("sliderItemWidth",sliderItemWidth);
+    console.log("sliderItemWidth", sliderItemWidth);
 
     nextBtn.addEventListener("click", function() {
         handleChangeSlide(1);

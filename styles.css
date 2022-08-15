@@ -8,7 +8,26 @@
   margin: 0;
   padding: 0;
 }
+:root {
+  /*=====Colors ======*/
+  --vermeil-color: #b05555a1;
+  --pink-color: #b74c4c6b;
 
+  /*===== Fonts and typography ======*/
+  --bigger-text: 24px;
+  --normal-text: 20px;
+  --smaller-text: 18px;
+
+  --title-heading: 36px;
+
+  /*===== Font weight ======*/
+  --font-medium: 400;
+  --font-bold: 600;
+  --font-semi-bold: 700;
+
+  /*===== line height ======*/
+  --lineheight: 1.5;
+}
 body {
   padding: 0;
   font-family: "Poppins", sans-serif;
@@ -19,7 +38,7 @@ body {
 } */
 
 img {
-  max-width: 100%;
+  width: 100%;
 }
 
 ul {
@@ -37,12 +56,20 @@ a {
   text-decoration: none;
 }
 .container {
-  max-width: 1400px;
+  max-width: 1714px;
   margin: 0 auto;
 }
-
+.title {
+  font-size: var(--title-heading);
+  font-weight: var(--font-semi-bold);
+  line-height: var(--lineheight);
+  letter-spacing: 8.82px;
+}
+.header_nav {
+  padding: 81px 0;
+}
 header {
-  background-color: #e1b4b4;
+  background-color: #b74c4c6b;
 }
 nav {
   width: 100%;
@@ -51,9 +78,11 @@ nav {
   justify-content: space-between;
 }
 .nav_logo a {
-  font-size: 36px;
-  font-weight: 700;
+  font-size: 48px;
+  font-weight: 400;
   color: #000;
+  line-height: 1.387;
+  letter-spacing: 11.76px;
   font-family: "Pattaya", sans-serif;
 }
 .nav_logo {
@@ -63,17 +92,19 @@ nav {
   position: relative;
 }
 
-nav.header_nav > ul.nav_list {
-  /* dùng dấu > để chỉ chọn tất cả ul con trong thẻ nav, ul cháu thì KO được ăn theo */
-  line-height: 100px;
-}
+/* nav.header_nav > ul.nav_list { */
+/* dùng dấu > để chỉ chọn tất cả ul con trong thẻ nav, ul cháu thì KO được ăn theo */
+
+/* } */
 nav ul.nav_list > li {
   display: inline-block;
   margin: 0 25px;
 }
 nav ul.nav_list > li > a {
   color: #fff;
-  font-size: 24px;
+  font-size: var(--bigger-text);
+  font-weight: var(--font-semi-bold);
+  letter-spacing: 5.88px;
   text-transform: capitalize;
   display: block; /* Để cho chiều cao thẻ a = chiều cao thẻ i */
 }
@@ -224,7 +255,7 @@ ul.nav_list > li > a:before {
   position: absolute;
   content: "";
   left: 0;
-  bottom: 30%;
+  bottom: 0;
   height: 3px;
   width: 100%;
   background: black;
@@ -246,16 +277,17 @@ ul.nav_list > li > a:hover:before {
 /*======INFORMATION======*/
 .information {
   background-color: #cd9493;
-  padding: 50px 0;
+  padding: 103px 0 131px 0;
 }
 .information-me {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  grid-column-gap: 137px;
 }
 
 .infor-image img {
-  width: 500px;
-  height: 500px;
+  width: 672px;
+  height: 644px;
   border-radius: 50%;
   flex: 1;
 }
@@ -270,19 +302,25 @@ ul.nav_list > li > a:hover:before {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  padding-right: 100px;
   text-align: center;
 }
 .infor-social-text h2 {
   margin-bottom: 35px;
-  letter-spacing: 5px;
+  color: #fff;
 }
 .infor-social-text p {
+  font-size: 24px;
+  line-height: var(--lineheight);
+  font-weight: 600;
+  letter-spacing: 2.4px;
+  color: #fff;
   margin-bottom: 30px;
 }
 .infor-social-text button {
   font-size: 24px;
-  letter-spacing: 5px;
+  line-height: var(--lineheight);
+  font-weight: 400;
+  letter-spacing: 5.88px;
   cursor: pointer;
   width: 300px;
   height: 60px;
@@ -312,6 +350,9 @@ ul.nav_list > li > a:hover:before {
   color: #000;
   transition: all 0.5s ease;
 }
+.info-social-network a i {
+  font-size: 25px;
+}
 
 /*======INTEREST======*/
 .interest-pic {
@@ -335,11 +376,6 @@ ul.nav_list > li > a:hover:before {
   transform: translateY(-50%);
   text-align: center;
   padding-left: 83px;
-}
-
-.interest-pic-heading h3 {
-  letter-spacing: 3px;
-  font-size: 36px;
 }
 
 .interest-pic-button button {
@@ -373,9 +409,11 @@ ul.nav_list > li > a:hover:before {
   justify-content: space-between;
   margin-bottom: 50px;
 }
-.interest-pic-lorem {
-  font-size: 18px;
-  letter-spacing: 3px;
+.interest-pic-lorem p {
+  font-size: var(--smaller-text);
+  font-weight: var(--font-medium);
+  line-height: 1.5;
+  letter-spacing: 4.41px;
 }
 
 .interest-pic-row1 {
@@ -422,26 +460,27 @@ ul.nav_list > li > a:hover:before {
   position: relative;
 }
 .contact-infor-details h3 {
-  letter-spacing: 3px;
-  font-size: 36px;
   margin-bottom: 47px;
 }
 
 .contact-infor-details p {
-  letter-spacing: 3px;
-  font-size: 18px;
+  letter-spacing: 4.9px;
+  line-height: var(--lineheight);
+  font-weight: 400;
+  font-size: 20px;
   margin-bottom: 47px;
 }
 
 .contact-infor-details button {
   width: 374px;
-  height: 97px;
+  padding: 30px 90px;
   background-color: rgba(192, 105, 77, 0.47);
   border: 0;
   border-radius: 5px;
   font-size: 24px;
-  line-height: 36px;
+  line-height: 1.5;
   font-weight: 700;
+  letter-spacing: 5.88px;
   cursor: pointer;
 }
 
@@ -456,13 +495,13 @@ ul.nav_list > li > a:hover:before {
   position: absolute;
   top: 38px;
   right: 32px;
+  cursor: pointer;
 }
 
 /*========== ClIENT =============*/
 
 #client {
   background-image: url(Assets/images/Rectangle-27.jpeg);
-
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -486,10 +525,14 @@ ul.nav_list > li > a:hover:before {
   z-index: 100;
 }
 .client-saying h3 {
-  font-weight: 700;
+  text-transform: uppercase;
   margin-bottom: 30px;
-  font-size: 36px;
-  font-weight: 700;
+}
+.client-saying p {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 5.88px;
 }
 /* Slider */
 .slider {
@@ -597,6 +640,9 @@ ul.nav_list > li > a:hover:before {
   text-align: center;
   justify-content: center;
 }
+.footer-social-link {
+  display: flex;
+}
 
 .footer-pics {
   max-width: 1400px;
@@ -634,7 +680,7 @@ ul.nav_list > li > a:hover:before {
   font-size: 30px;
 }
 
-.footer-social a i:hover {
+.footer-social .footer-social-link i:hover {
   color: rgba(183, 76, 76, 0.35);
   transition: all 0.5s ease;
   padding-left: 10px;
@@ -646,17 +692,29 @@ ul.nav_list > li > a:hover:before {
 
 /*============RESPONSIVE============*/
 
-@media screen and (max-width: 580px) {
+@media screen and (max-width: 739px) {
+  .container {
+    padding-inline: 30px;
+  }
+  .title {
+    font-size: 24px;
+    font-weight: var(--font-semi-bold);
+    line-height: var(--lineheight);
+    letter-spacing: 4.4px;
+  }
+  .header_nav {
+    padding: 35px 30px;
+  }
   .nav_logo a {
     font-size: 24px;
+    letter-spacing: 4px;
   }
   .nav_logo {
-    padding: 0 50px;
-    line-height: 60px;
+    padding: 0;
+    margin-right: 0;
   }
   nav .nav_toggle {
     display: block;
-    margin-right: 10%;
     padding-top: 0;
   }
 
@@ -669,7 +727,7 @@ ul.nav_list > li > a:hover:before {
     width: 100%;
     height: 120vh;
     background-color: #64a19d;
-    top: 60px;
+    top: 110px;
     left: -100%;
     text-align: center;
     transition: all 0.5s;
@@ -698,6 +756,13 @@ ul.nav_list > li > a:hover:before {
     display: flex;
     /* align-items: center; */
     justify-content: center;
+    line-height: 70px;
+  }
+  nav ul.nav_list > li > a {
+    color: #fff;
+    font-size: 20px;
+    font-weight: var(--font-semi-bold);
+    letter-spacing: 3px;
   }
   ul.submenu {
     width: 50%;
@@ -707,6 +772,11 @@ ul.nav_list > li > a:hover:before {
     top: 100%;
     left: 0;
     z-index: 100;
+  }
+  ul.submenu > li > a {
+    font-size: 18px;
+    color: #fff;
+    letter-spacing: 2.5px;
   }
 
   /*======== INFORMATION =======*/
@@ -741,17 +811,21 @@ ul.nav_list > li > a:hover:before {
   }
   .infor-social-text h2 {
     margin-bottom: 35px;
-    letter-spacing: 5px;
   }
   .infor-social-text p {
+    font-size: 20px;
+    line-height: var(--lineheight);
+    font-weight: 600;
+    letter-spacing: 2.4px;
+    color: #fff;
+    margin-bottom: 30px;
     margin-bottom: 30px;
   }
   .infor-social-text button {
-    font-size: 24px;
-    letter-spacing: 5px;
+    font-size: 18px;
+    letter-spacing: 3px;
     cursor: pointer;
-    width: 300px;
-    height: 60px;
+    width: 200px;    
     border-radius: 5px;
     border: 0;
     background-color: #e6c8c8;
@@ -767,11 +841,12 @@ ul.nav_list > li > a:hover:before {
     max-width: 150px;
     margin: 0 auto;
     justify-content: space-between;
+    align-items: center;
   }
 
   .infor-social-icons .info-social-network a {
     color: rgba(0, 0, 0, 0.6);
-    font-size: 24px;
+    font-size: 18px;
   }
 
   .infor-social-icons .info-social-network a:hover {
@@ -889,13 +964,13 @@ ul.nav_list > li > a:hover:before {
 
   .contact-infor-details button {
     width: 200px;
-    height: 60px;
+    padding: 20px 20px;
     background-color: rgba(192, 105, 77, 0.47);
     border: 0;
     border-radius: 5px;
-    font-size: 24px;
-    line-height: 36px;
+    font-size: 18px; 
     font-weight: 700;
+    letter-spacing: 3px;
     cursor: pointer;
   }
 
@@ -906,7 +981,7 @@ ul.nav_list > li > a:hover:before {
   }
 
   .contact-infor .bx {
-    font-size: 36px;
+    font-size: 30px;
     position: absolute;
     top: 30px;
     right: 40px;
@@ -938,11 +1013,12 @@ ul.nav_list > li > a:hover:before {
   .client-saying h3 {
     font-weight: 700;
     margin-bottom: 20px;
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 700;
   }
   .client-saying p {
     font-size: 18px;
+    letter-spacing: 2.5px;
   }
   /* Slider */
   .slider {
